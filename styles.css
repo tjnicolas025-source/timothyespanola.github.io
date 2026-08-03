@@ -1,0 +1,406 @@
+:root {
+  --dark: #18212f;
+  --text: #293241;
+  --muted: #697386;
+  --line: #dbe3ee;
+  --paper: #ffffff;
+  --soft: #f4f7fb;
+  --blue: #2563eb;
+  --green: #119c78;
+  --yellow: #f5b942;
+  --shadow: 0 18px 50px rgba(24, 33, 47, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--soft);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid var(--line);
+}
+
+.navbar {
+  width: min(1120px, calc(100% - 32px));
+  min-height: 72px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  background: var(--dark);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+#navLinks{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+
+.nav-links a:hover {
+  color: var(--blue);
+}
+
+.menu-button {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  cursor: pointer;
+}
+
+.menu-button span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 5px auto;
+  background: var(--dark);
+}
+
+.section {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 76px 0;
+}
+
+.hero {
+  min-height: calc(100vh - 72px);
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.eyebrow {
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--dark);
+  line-height: 1.15;
+}
+
+h1 {
+  max-width: 760px;
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 34px;
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.hero-copy {
+  max-width: 620px;
+  color: var(--muted);
+  font-size: 18px;
+  margin-bottom: 28px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 20px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.primary-button {
+  color: #ffffff;
+  background: var(--blue);
+}
+
+.secondary-button {
+  color: var(--dark);
+  background: #ffffff;
+  border: 1px solid var(--line);
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-photo {
+  width: min(100%, 340px);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center top;
+  border: 10px solid #ffffff;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: var(--shadow);
+}
+
+.section-heading {
+  max-width: 650px;
+  margin-bottom: 28px;
+}
+
+.about-grid,
+.hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.about-card,
+.hobby-card,
+.contact-box,
+.timeline {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(24, 33, 47, 0.06);
+}
+
+.about-card,
+.hobby-card {
+  padding: 24px;
+}
+
+.about-card p,
+.hobby-card p,
+.timeline-item p,
+.contact-box p {
+  color: var(--muted);
+}
+
+.timeline {
+  padding: 10px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 24px;
+  padding: 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+.timeline-item:last-child {
+  border-bottom: 0;
+}
+
+.timeline-year {
+  color: var(--blue);
+  font-weight: 800;
+}
+
+.skills-section {
+  padding-top: 24px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skills-list span {
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--dark);
+  font-weight: 700;
+}
+
+.hobby-icon {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  color: var(--dark);
+  background: var(--yellow);
+  font-weight: 800;
+}
+
+.hobby-card:nth-child(2) .hobby-icon {
+  color: #ffffff;
+  background: var(--blue);
+}
+
+.hobby-card:nth-child(3) .hobby-icon {
+  color: #ffffff;
+  background: var(--green);
+}
+
+.contact-section {
+  padding-bottom: 56px;
+}
+
+.contact-box {
+  padding: 26px;
+}
+
+.contact-box p {
+  margin-bottom: 12px;
+}
+
+.contact-box p:last-child {
+  margin-bottom: 0;
+}
+
+.contact-box a {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.site-footer {
+  padding: 28px 16px;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+  background: #ffffff;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: 0.5s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 820px) {
+  .menu-button {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 72px;
+    left: 16px;
+    right: 16px;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 10px;
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 12px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 44px;
+    gap: 34px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .about-grid,
+  .hobby-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section,
+  .navbar {
+    width: min(100% - 24px, 1120px);
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .hero-copy {
+    font-size: 16px;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
